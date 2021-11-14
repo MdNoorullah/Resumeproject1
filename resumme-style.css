@@ -1,0 +1,292 @@
+/*header*/
+header{
+ background-image: url(../resume/image/macbook_mouse.jpg);                                             
+ height: 65vh;
+ width: 100vw;
+ background-position: center;
+ background-attachment: fixed;
+ background-size: cover;
+}
+.horizontal-list{ 
+                   list-style: none;/*for dot removing*/   
+                   padding-left: 0px; 
+                 
+                                    
+}
+.horizontal-list li{  text-decoration: none;/*for removing underline*/
+                      margin: 0px 8px 0px 8px;
+                      color: white;                       
+                      display: inline-block;       
+            
+}
+.horizontal-list li a{  color: aliceblue;
+ text-decoration: none;/*for removing underline*/                           
+ transition: color 0.5s,border-bottom 4s;/*time lag between change of colour or any transition*/
+}
+.horizontal-list li a:hover{
+                     color: rgb(150, 211, 150);
+                     text-decoration: underline;                          
+}
+.text-centre{
+ text-align: center;                                            
+}
+/*
+#navbar{
+  position: static;                                           
+}*/
+/*2nd part of header*/
+#name-social-container{
+   margin: 20vh;
+}
+#my-name{
+   font-size: 3rem;  
+   letter-spacing: 0.1rem;   
+   color: aliceblue; 
+   font-weight: bold;    
+   margin-bottom: 0.5rem;                                
+}
+.social-icon li a i{
+    padding: 10px;   
+    font-size: 1rem; 
+   border-radius: 50%;                                   
+}
+.social-icon li a i:hover{
+         /*for making circular when hover 1.horizontal
+           shadow, vertical,blur,spread,colour
+           if border radius is not given to icon then square */                                    
+              box-shadow: 0px 0px 6px 4px rgb(216, 171, 171);                               
+}
+
+/*section part start*/
+section{
+   width: 100%;
+   display:flex;
+   flex-direction:column;
+   align-items:center;/*  to centralise items*/
+   
+}
+section:nth-child(2n)
+{
+   background-color: grey;
+}
+section:nth-child(2n+1)
+{
+   background-color:white;
+}
+#my-image{
+       
+  margin: auto;/*makes to centre*/
+  margin-top: -17vh;/*for making image to move and come over header image*/
+  position: relative;
+  width:12rem;         
+  height: 12rem;  
+                      
+}
+#my-image img{  /*relative to parent i.e m image*/
+   height: 100%;
+   width: 100%;  
+   border-radius: 60%;  /*gives circular look*/  
+   box-shadow: 0px 0px 6px 3px rgb(150, 165, 169);                                     
+}
+#about p{
+  font-size: 2em;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   text-align: justify; /*both left and right parallel*/ 
+   width: 75%;
+   margin: auto;                                   
+}
+/* skills section styling */
+.section-heading{
+   width: auto;
+   padding: 10px 10px 10px;
+ /* margin: 10px auto;  top bottom 10 px side auto to centralise if 
+   section is not made alighn item centre*/
+   font-weight: 400;
+}
+#skills{
+   background: linear-gradient(-40deg,rgb(12, 238, 91) ,white,rgb(217, 102, 8));
+}
+.section-heading span{
+   color: rgb(23, 23, 75);
+  width: auto;  /*to centre*/
+   margin:auto;
+   font-size: 40px;
+   display: inline-block;
+   text-transform: uppercase;
+}
+ .skills-display{
+    width: 70%;
+   /*height: 40vh;
+    border: 2px solid black;*/
+    
+    display: flex;
+    flex-wrap: wrap;/* to make skills display section wrap no need of hwight */ 
+    justify-content: space-between; 
+ }
+ .skill-progress{
+    height: 1.4rem;
+    width: 7rem;
+    background-color: lightgrey;
+    border-radius: 10px;
+    margin-top: 1.4rem;
+    margin-bottom: 1.2 rem;
+   }
+ .skill-name span{
+    color:white;
+    font-size: 0.75rem;
+ }
+ .skill-progress>div{
+   border-radius: 10px 0px 0px 10px;
+ }
+.mb75px{
+   margin-bottom: 75px;
+}
+/* education*/
+#education{
+   background: linear-gradient(40deg,rgb(15, 212, 150) 50%,rgb(19, 61, 159));
+}
+.timeline{
+ 
+   width: 75%;
+   position:relative;
+  
+}
+
+.timeline-box{
+   position: relative;
+   margin: 5px;
+   width: 40%;
+   left: 5%;
+   min-height: 150px;
+   
+   background: linear-gradient(40deg,rgb(105, 105, 217) 50%,rgb(214, 206, 214));
+}
+.timeline-box:nth-child(2n)
+{
+   left: 55%;
+}
+.timeline-devider{
+   position: absolute;/* what we give it should occupy*/
+   height: 80%;
+   width: 0;
+   top: 10%;
+   left: 50%;/* to centre dashed*/
+   border: 3px dashed #0096fa6b;
+}
+ .timeline-devider-icon{
+    position: sticky;/* icon remains stick if observe*/
+    top: 25%;
+    transform: rotate(90deg);
+ }
+ /* for mobile we want devider to come first then box*/
+ @media screen  and (max-width:600px){
+    .timeline-devider{
+       left: 5% ;/* as boxes starts from 5%*/
+    }
+    .timeline-box{
+       left: 12% !important; 
+       width: 80% ;/* as more spaces for conent no devider*/
+    
+    }  
+     header{
+         height: 45vh;
+         background-attachment:scroll
+      }
+    
+    /* width inc so left move outside div
+    .timeline-box.timeline-box:nth-child(2n){
+       left: 12%;
+    }  or mark left as !important so that 2n aaso validate*/ 
+   /* .timeline-box:nth-child(2n)::after{
+       left: -12%;
+    }
+    .timeline-box:nth-child(2n+1)::after{
+      left: -12%;
+   }*/
+   .timeline-box::after{
+      left: -12% !important;
+
+   }
+   html{
+      font-size: 10px;
+   }
+   #my-image{
+      margin-top: -15%;
+   }
+   }
+ /* for dot to place on devider*/
+ .timeline-box:nth-child(2n+1)::after
+ {
+   content: '';
+   position: absolute;/* what we gave should stick there*/
+   top: 30%;/* as devider starts from 25*/
+   right: -13%;/* shift dot right ward 0 in rightmost - will move out*/
+   
+   width: 0.5rem;
+   height: 0.5 rem;border-radius: 50%; /*to circle*/
+   
+   background-color: red;
+   z-index: 1;
+ }
+ .timeline-box:nth-child(2n)::after
+ {
+   content: '';
+   position: absolute;/* what we gave should stick there*/
+   top: 30%;/* as devider starts from 25*/
+   left: -13%;/* shift dot right ward 0 in rightmost - will move out*/
+   border-radius: 50%; /*to circle*/
+   width: 0.5rem;
+   height: 0.5 rem;
+   background-color: red;
+   z-index: 1;/* to show dot than aeroplane once overlap*/
+ }
+/*portfolio starts */
+.portfolio-display{
+   width: 70%;
+   display: flex;
+   flex-wrap: wrap;/* to make skills display section wrap no need of hwight */ 
+    justify-content: space-between;
+}
+.portfolio-content img{
+   height: 10rem;
+   width: 10rem;
+   margin-top: 1.4rem;
+   margin-bottom: 1.2 rem;
+}
+/*contact section*/
+  #contact{
+   background: linear-gradient(40deg,rgb(105, 105, 217) 50%,purple);
+
+  }
+  .contact-display{
+   width: 75%;
+   display: flex;
+   flex-wrap: wrap;
+   
+   justify-content: space-between;
+  }
+  .contact-form{
+   width: 35%;
+   }
+/*common colour classes */
+ .text-highlight{
+    color: #2857a4;
+    font-weight: 600;
+ }
+ .mb-blue{
+    background-color: #2857a4;
+ }
+ .mb-green{
+    background-color: green;
+ }
+/* percent classes */
+.eighty-five-percent{
+   width: 85%;
+   height: inherit;
+   /*border-radius: 10px 0px 0px 10px;top left top right
+    bottom right bottom left not direct use it apply direct div */
+}
+.fifty-five-percent{
+   width: 50%;
+   height: inherit;
+}
